@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
   return (
     <div>
       <h2>Home Page</h2>
-      <img src={ Lion }  style={{ width: '300px'}}/>
+      <img src={ Lion }  style={{ width: '500px'}}/>
       <ul>
         {articles.map((article) => (
           <li key={article.id}>

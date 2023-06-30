@@ -45,7 +45,7 @@ const AddArticlePage: React.FC = () => {
             onChange={handleChange}
           />
         </label>
-        <button type="submit">Add Article</button>
+        <button type="submit" style={{width: "300px"}}>Add Article</button>
       </form>
       <input type='checkbox'/>
       <input type='radio' />

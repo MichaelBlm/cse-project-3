@@ -6,8 +6,8 @@ const Header: React.FC = () => {
     <header>
       <h1>Blog App</h1>
       <nav>
-        <Link to="/">Home</Link>
         <Link to="/add-article">Add Article</Link>
+        <Link to="/">Home</Link>
       </nav>
     </header>
   );
