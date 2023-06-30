@@ -7,6 +7,10 @@ describe('Article App', () => {
   it('should display the home page with preloaded articles', () => {
     cy.get('h2').should('contain', 'Home Page');
 
+
+    //Check the image size
+    cy.get('img').should('have.css', 'width', '300px')
+    .should('be.visible')
     // Check existence of GUI elements
     cy.get('header').should('be.visible');
     cy.get('header a').should('have.length', 2);
@@ -24,6 +28,10 @@ describe('Article App', () => {
     // Check existence of GUI elements
     cy.get('header').should('be.visible');
     cy.get('header a').should('have.length', 2);
+
+    // Checks checkbox and radio
+    cy.get('[type="checkbox"]').check() // Check checkbox element
+    cy.get('[type="radio"]').first().check() //Check first radio element
   });
 
   it('should navigate to the add article page, submit a new article, and check GUI elements', () => {
@@ -37,10 +45,14 @@ describe('Article App', () => {
     cy.get('input[name="title"]').should('be.visible');
     cy.get('input[name="content"]').should('be.visible');
     cy.get('button[type="submit"]').should('be.visible');
+    // Checks checkbox and radio
+    cy.get('[type="checkbox"]').check() // Check checkbox element
+    cy.get('[type="radio"]').first().check() //Check first radio element
     
     cy.get('input[name="title"]').type('New Article');
     cy.get('input[name="content"]').type('New Article Content');
     cy.get('button[type="submit"]').click();
+
 
     // After submission, it should navigate back to the home page
     cy.get('h2').should('contain', 'Home Page');
