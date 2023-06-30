@@ -13,8 +13,8 @@ const App: React.FC = () => {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/article/:id" element={<ArticlePage />} />
-        <Route path="/add-article" element={<AddArticlePage />} />
+        <Route path="/article/:id" element={<AddArticlePage />} />
+        <Route path="/add-article" element={<ArticlePage />} />
       </Routes>
       </ArticleProvider>
     </Router>
